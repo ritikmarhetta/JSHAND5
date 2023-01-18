@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js hand 5</title>
+</head>
+<body>
+    <h3>Q.1 Count Characters</h3>
+    <pre>
+        const countCharacters = (S) => 
+{
+  let countA=0; let countD=0;
+  let N=S.length; let B=[];
+  for(let i=0; i < N; i++)
+  {
+    if(S[i]==='A')
+    countA++;
+    if(S[i]==='D')
+    countD++;
+  }
+  B[0]=countA;
+  B[1]=countD;
+  return B;
+};
+    </pre>
+    <h3>Q.2 Count the Heads</h3>
+    <pre>
+var Count_Occ = (s) => 
+        {
+           let n=s.length;
+            let str = s.split("").sort().join("");
+            let ans="";
+            for(let i=0;i<n;i++) {//for the character thats is needed to be checked.
+              let count =0;
+              for(let j=0;j<n;j++) {//for the count of that character
+              //this condition will tell you if the character has come first time or not
+                if(str[i]===str[j] && i>j) {
+                  break;
+                }
+                
+                if(str[i]===str[j]) {
+                  count+=1;
+                }
+              }
+              if(count>1) {
+                ans+=str[i]+count;
+              }
+            }
+            return ans;
+         
+        };
+         </pre
+    >
+    <h3>Q.3 Count the Vowels</h3>
+    <pre>
+var Count_Vowels= (S) => 
+{
+  let countV=0;
+  let N=S.length;
+  for(let i=0; i < N; i++)
+  {
+    switch(S[i]){
+      case'A': countV++; break;
+      case'a': countV++; break;
+      case'E': countV++; break;
+      case'e': countV++; break;
+      case'I': countV++; break;
+      case'i': countV++; break;
+      case'O': countV++; break;
+      case'o': countV++; break;
+      case'U': countV++; break;
+      case'u': countV++; break;
+    }
+  }
+  S=countV;
+  return S; 
+};</pre
+    >
+    <h3>Q.4 Concatenate the Strings</h3>
+    <pre>
+var Concatenate_Strings = (S1, S2) => 
+{
+  let S3;
+  S3=S1.concat(S2);
+  return S3;
+};
+    </pre>
+    <h3>Q.5 Find Length</h3>
+    <pre>
+ const findLength = (S) => 
+{
+  let i=0; let count=0;
+  while(S[i]!==undefined)
+  {
+    count++;
+    i++;
+  }
+  S=count;
+  return S;
+};
+    </pre>
+    <h3>Q.6 Find Length</h3>
+    <pre>
+const findLength = (S) => 
+        {
+          let i=0; let count=0;
+          while(S[i]!==undefined)
+          {
+            count++;
+            i++;
+          }
+          S=count;
+          return S;
+        };
+            </pre
+    >
+    <h3>Find the Winner</h3>
+    <pre>
+var Game_Winner = (S) => 
+                {
+                  let n=S.length;
+                  let countA=0;
+                  let countD=0;
+                  for( let i =0; i<n;i++)
+                  {
+                    if(S[i]==="A")
+                    {
+                      countA++;
+                    }
+                    if(S[i] ==="D")
+                    {
+                      countD++;
+                    }
+                  }
+                  if( countA===countD)
+                  {
+                    return "Draw"
+                  }
+                  else
+                  {if(countA>countD)
+                  {
+                    return "Aditya";
+                  }
+                  else{
+                    return "Danish"
+                  }
+                }
+                };</pre
+    >
+    <h3>Q.7 Join Strings</h3>
+    <pre>
+        const joinStrings = (S, P) => 
+  {
+  return(S.concat(P)); 
+    
+};
+    </pre>
+    <h3>Q . 8 Plaindrome Check</h3>
+    <pre>
+ var Palin_Check = (str) =>
+{
+	let revstr="";
+	let N=str.length;
+	for(let i=N-1;i>=0;i--)
+	{
+	    revstr+=str[i];
+	}
+	if(str===revstr)
+	{
+	    return 'True';
+	}
+	else
+	{
+	    return 'False';
+	}
+}</pre
+    >
+    <h3>Q.9 Reverse the String</h3>
+    <pre>
+ var Reverse_String = (str) => 
+{
+    let revstr="";
+    let N=str.length;
+    for(let i=N-1;i>=0;i--)
+    {
+        revstr+=str[i];
+    }
+    return revstr; 
+};
+    </pre>
+    <h3>Q.10 Match the Strings</h3>
+    <pre>
+var String_Match = (S1,S2) => 
+        {
+          if(S1===S2)
+          {
+            return 'YES';
+          }
+          else
+          {
+            return 'NO';
+          }
+        };</pre
+    >
+    <h3>Q .11 String Replace</h3>
+    <pre>
+            var Replace = (S, pattern , text) => 
+            {
+             S = S.replace(pattern,text);
+             return S;
+            }; </pre
+    >
+    <h3>Q . 11 Split the String</h3>
+    <pre>
+        var Split_the_string = (S) => 
+        {
+          return S.split(' ');
+        };
+         </pre
+    >
+    <h3>Q.12 Count the Vowels and Consonants</h3>
+    <pre>
+            var Count_Vowels= (S) => 
+            {
+              let N=S.length; let countV=0;
+              for(let i=0; i < N; i++)
+              {
+                switch(S[i])
+                {
+                  case 'A': countV++; break;
+                  case 'E': countV++; break;
+                  case 'I': countV++; break;
+                  case 'O': countV++; break;
+                  case 'U': countV++; break;
+                  case 'a': countV++; break;
+                  case 'e': countV++; break;
+                  case 'i': countV++; break;
+                  case 'o': countV++; break;
+                  case 'u': countV++; break;
+                }
+              }
+              return countV;
+            };
+            var Count_Consonants= (S) => 
+            {
+              let N=S.length; let countV=0; let countC=0;
+              for(let i=0; i < N; i++)
+              {
+                switch(S[i])
+                {
+                  case 'A': countV++; break;
+                  case 'E': countV++; break;
+                  case 'I': countV++; break;
+                  case 'O': countV++; break;
+                  case 'U': countV++; break;
+                  case 'a': countV++; break;
+                  case 'e': countV++; break;
+                  case 'i': countV++; break;
+                  case 'o': countV++; break;
+                  case 'u': countV++; break;
+                }
+              }
+              countC = N - countV;
+              return countC;
+            };
+            </pre>
+</body>
+</html>
